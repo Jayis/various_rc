@@ -92,6 +92,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias rm='rm -i'
+alias watch-gpu='watch -n 3 nvidia-smi'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -117,6 +118,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/usr/local/cuda-9.1/bin
-export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64
+export PATH=$PATH:/usr/local/cuda/bin
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
+export PYTHONPATH=/home/harry/caffe2/build
 
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/harry/google-cloud-sdk/path.bash.inc' ]; then source '/home/harry/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/harry/google-cloud-sdk/completion.bash.inc' ]; then source '/home/harry/google-cloud-sdk/completion.bash.inc'; fi

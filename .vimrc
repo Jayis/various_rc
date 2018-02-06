@@ -25,3 +25,9 @@ set expandtab softtabstop=4
 
 " To quickly change between insert mode and paste mode
 set pastetoggle=<C-P>
+
+" See current fileName
+set laststatus=2
+
+" since my terminal has dark bg
+set bg=dark
